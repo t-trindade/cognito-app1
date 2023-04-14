@@ -10,6 +10,7 @@ import org.springframework.web.client.HttpClientErrorException;
 @RestControllerAdvice
 public class ApplicationExceptionHandler {
 
+    @ResponseStatus(HttpStatus.FORBIDDEN)
     @ExceptionHandler(HttpClientErrorException.class)
     public String forbiden(){
         return "Você não possui autorização para acessar esse recurso!";
