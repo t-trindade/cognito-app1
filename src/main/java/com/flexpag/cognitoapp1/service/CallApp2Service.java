@@ -1,6 +1,5 @@
 package com.flexpag.cognitoapp1.service;
 
-import com.fasterxml.jackson.databind.json.JsonMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
@@ -19,7 +18,7 @@ public class CallApp2Service {
         header.set("Authorization", authorization);
         var entity = new HttpEntity<>(null, header);
 
-        var response = restTemplate.exchange("http://localhost:8080/app2/api/autenticar", HttpMethod.GET, entity, String.class);
+        var response = restTemplate.exchange("http://localhost:8080/app2/api/conectar", HttpMethod.GET, entity, String.class);
 
         return response.getBody().replace("!!", "") .concat(" com o token do app1!!");
     }
