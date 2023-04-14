@@ -34,7 +34,7 @@ Header: Authorization Bearer eyJraWQiOiJ****
 
 | Verbo | Escopo      | EndPoint                                    |   Informação                 |
 |-------|-------------|---------------------------------------------|------------------------------|
-| GET   | IT/INTERNAL | http://localhost:8081/api/conectar          |Acessa o endpoint do APP1     |
+| GET   | IT/INTERNAL | http://localhost:8081/api/conectar          |              -               |
 | GET   | IT/INTERNAL | http://localhost:8081/api/conectar/app2     |Faz uma requisição para o APP2|
 | GET   | IT/INTERNAL | http://localhost:8081/api/nao-conectar/app2 |Faz uma requisição para o APP2|
 
