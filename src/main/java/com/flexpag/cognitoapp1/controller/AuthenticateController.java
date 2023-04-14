@@ -15,17 +15,17 @@ public class AuthenticateController {
 
     private final CallApp2Service callApp2Service;
 
-    @GetMapping("/autenticar")
+    @GetMapping("/conectar")
     public String auth() {
-        return "Sou App1 e estou autenticado!!";
+        return "Sou App1 e tenho autorização para conectar nessa API!!";
     }
 
-    @GetMapping("/autenticar/app2")
+    @GetMapping("/conectar/app2")
     public String callApp2(@RequestHeader("Authorization") String authorization) {
         return callApp2Service.authApp2(authorization);
     }
 
-    @GetMapping("/nao-autenticar/app2")
+    @GetMapping("/nao-conectar/app2")
     public String callApp2Admin(@RequestHeader("Authorization") String authorization) {
         return callApp2Service.authApp2Admin(authorization);
     }
